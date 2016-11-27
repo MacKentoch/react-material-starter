@@ -7,7 +7,7 @@ const assetsDir       = path.join(__dirname, 'docs/public/assets');
 const nodeModulesDir  = path.join(__dirname, 'node_modules');
 const vendorsDir      = path.join(__dirname, 'src/app/vendors');
 
-let config = {
+const config = {
   entry: [
     path.join(__dirname, 'src/app/index.js')
   ],

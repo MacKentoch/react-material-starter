@@ -11,6 +11,7 @@ import {
 import { App }                  from '../containers';
 import {
   Home,
+  About,
   PageNotFound
 }                               from '../views';
 
@@ -19,6 +20,7 @@ export const Routes = () => {
     <Router history={hashHistory}>
       <Route path="/" component={App} >
         <IndexRoute component={Home} />
+        <Route path="/about" component={About} />
 
         <Route path="*" component={PageNotFound} />
       </Route>

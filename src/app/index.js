@@ -10,6 +10,7 @@ import 'babel-polyfill';
 import 'animate.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'ionicons/dist/css/ionicons.css';
+import 'flexboxgrid/dist/flexboxgrid.min.css';
 import './style/index.style.scss';
 
 const ELEMENT_TO_BOOTSTRAP = 'root';

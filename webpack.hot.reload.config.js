@@ -6,7 +6,7 @@ const precss        = require('precss');
 const assetsDir   = path.join(__dirname, 'public/assets');
 const vendorsDir  = path.join(__dirname, 'src/app/vendors');
 
-let config = {
+const config = {
   devtool: 'cheap-module-source-map',
   entry: [
     'react-hot-loader/patch',

@@ -8,7 +8,8 @@ import {
   grey500,
   white,
   darkBlack,
-  fullBlack
+  fullBlack,
+  indigo900
 }               from 'material-ui/styles/colors';
 import {fade}   from 'material-ui/utils/colorManipulator';
 import spacing  from 'material-ui/styles/spacing';
@@ -33,6 +34,22 @@ export default {
     shadowColor: fullBlack
   },
   appBar: {
-    color: fullBlack,
+    color: indigo900
+  },
+  zIndex: {
+    // ==>  defaults values:
+    // menu: 1000,
+    // appBar: 1100,
+    // leftNavOverlay: 1200,
+    // leftNav: 1300,
+    // dialogOverlay: 1400,
+    // dialog: 1500,
+    // layer: 2000,
+    // popover: 2100,
+    // snackbar: 2900,
+    // tooltip: 3000
+    appBar: 1300,
+    leftNavOverlay: 1100,
+    leftNav: 1200
   }
 };

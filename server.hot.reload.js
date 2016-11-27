@@ -1,14 +1,15 @@
 /* eslint no-console:0 */
 /* eslint consistent-return:0 */
-const path = require('path');
-const webpack = require('webpack');
-const express = require('express');
+const path          = require('path');
+const webpack       = require('webpack');
+const express       = require('express');
 const devMiddleware = require('webpack-dev-middleware');
 const hotMiddleware = require('webpack-hot-middleware');
-const config = require('./webpack.hot.reload.config');
+const config        = require('./webpack.hot.reload.config');
 
-const app = express();
-const compiler = webpack(config);
+const app       = express();
+const compiler  = webpack(config);
+
 
 app.use(devMiddleware(compiler, {
   publicPath: config.output.publicPath,
@@ -17,7 +18,7 @@ app.use(devMiddleware(compiler, {
 
 app.use(hotMiddleware(compiler));
 
-app.get('*', function (req, res) {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 

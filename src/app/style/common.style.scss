@@ -5,3 +5,44 @@
    margin: 0;
    padding: 0
  }
+
+
+ .invisible {
+   opacity: 0;
+ }
+
+ .animatedViews {
+   animation-duration: 0.3s;
+   animation-fill-mode: both;
+ }
+
+ .view-enter {
+    animation: smoothFadeInUp 0.3s both ease-in;
+    z-index: 1;
+  }
+
+ @keyframes smoothFadeInUp {
+   0% {
+     opacity: 0;
+     transform: translate3d(0, 3%, 0);
+   }
+
+   90% {
+     opacity: 0.3;
+     transform: none;
+   }
+
+   95% {
+     opacity: 0.5;
+     transform: none;
+   }
+
+   100% {
+     opacity: 1;
+     transform: none;
+   }
+ }
+
+ .smoothFadeInUp {
+   animation-name: smoothFadeInUp;
+ }

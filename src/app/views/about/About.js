@@ -12,7 +12,7 @@ import {
 }                         from 'material-ui/Card';
 import FlatButton         from 'material-ui/FlatButton';
 
-class Home extends Component {
+class About extends Component {
 
   state = {
     animated: true,
@@ -36,7 +36,7 @@ class Home extends Component {
 
     return(
       <section
-        id="home__container"
+        id="about__container"
         className={
           cx({
             'content':       true,
@@ -50,7 +50,7 @@ class Home extends Component {
             <div className="box">
               <Card>
                 <CardTitle
-                  title="Home"
+                  title="About"
                   subtitle="View"
                 />
                 <CardText>
@@ -60,6 +60,10 @@ class Home extends Component {
                   Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
                 </CardText>
                 <CardActions>
+                  <FlatButton
+                    label="go Home"
+                    onTouchTap={this.routeToHome}
+                  />
                   <FlatButton
                     label="go previous"
                     onTouchTap={this.goPreviousRoute}
@@ -77,20 +81,25 @@ class Home extends Component {
     this.setState({viewEnters: true});
   }
 
+  routeToHome = event => {
+    event.preventDefault();
+    const { router } = this.context;
+    router.push({pathname: '/'});
+  }
+
   goPreviousRoute = () => {
     const { router } = this.context;
     router.goBack();
   }
 }
 
-Home.propTypes= {
+About.propTypes= {
 
 };
 
-Home.contextTypes = {
+About.contextTypes = {
   // for manual routing
   router: React.PropTypes.object.isRequired
 };
 
-
-export default Home;
+export default About;

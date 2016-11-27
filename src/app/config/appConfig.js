@@ -8,6 +8,13 @@ export const appConfig = {
   // fake delay to mock async
   FAKE_ASYNC_DELAY: 1000,
 
-  APP_NAME: 'reactDirector'
+  APP_NAME: 'reactMaterialStarter',
+
+  DRAWER: {
+    menus: [
+      {id: 1, title: 'Home', routeName: '/'},
+      {id: 2, title: 'About', routeName: 'about'}
+    ]
+  }
 
 };

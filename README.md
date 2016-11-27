@@ -1,6 +1,10 @@
 # React Material Starter
 
+> A simple `ReactJS` starter that uses `Material UI`.
 
+*Note: this starter is still at early stage*
+
+### [preview here](https://mackentoch.github.io/react-material-starter)
 
 ## contents
  - react 15.4+
