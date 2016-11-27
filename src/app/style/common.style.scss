@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
  body {
-   font-family: 'Roboto', sans-serif;
+   font-family: 'robotoregular', sans-serif;
    margin: 0;
    padding: 0
  }

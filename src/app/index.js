@@ -4,7 +4,8 @@ import injectTpEventPlugin  from 'react-tap-event-plugin';
 import { Routes }           from './routes/Route';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme          from 'material-ui/styles/getMuiTheme';
-import Theme                 from './theme';
+import Theme                from './theme';
+
 
 import 'babel-polyfill';
 import 'animate.css';
