@@ -7,3 +7,5 @@ node_modules/
 build/
 dist/
 public/assets/
+/coverage
+/.nyc_output
