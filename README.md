@@ -1,3 +1,5 @@
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://github.com/MacKentoch/react-material-starter)
+
 # React Material Starter
 
 > A simple `ReactJS` starter that uses `Material UI`.
