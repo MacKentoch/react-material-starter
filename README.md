@@ -2,7 +2,6 @@
 
 > A simple `ReactJS` starter that uses `Material UI`.
 
-
 ### [preview here](https://mackentoch.github.io/react-material-starter)
 
 ## contents
@@ -11,7 +10,7 @@
  - Roboto font
  - [Flexbox Grid](http://flexboxgrid.com/)
  - react-hot-loader v3+
- 
+
 
 
  ## License
