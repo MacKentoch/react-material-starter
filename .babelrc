@@ -9,5 +9,6 @@
     "production": {
       "presets": ["react-optimize"]
     }
-  }
+  },
+  "plugins": ["react-hot-loader/babel"]
 }
