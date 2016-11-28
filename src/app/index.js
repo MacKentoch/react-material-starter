@@ -7,12 +7,8 @@ import Theme                from './theme';
 import { AppContainer }     from 'react-hot-loader';
 import Root                 from './Root';
 import routes               from './routes/Routes';
-
-
 import 'babel-polyfill';
 import 'animate.css';
-import 'font-awesome/css/font-awesome.min.css';
-import 'ionicons/dist/css/ionicons.css';
 import 'flexboxgrid/dist/flexboxgrid.min.css';
 import './style/index.style.scss';
 
@@ -44,11 +40,3 @@ if (module.hot) {
     }
   );
 }
-
-// const AllApp = () => (
-//   <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
-//     <Routes />
-//   </MuiThemeProvider>
-// );
-//
-// ReactDOM.render(<AllApp />, BootstrapedElement);

@@ -2,15 +2,16 @@
 
 > A simple `ReactJS` starter that uses `Material UI`.
 
-*Note: this starter is still at early stage*
 
 ### [preview here](https://mackentoch.github.io/react-material-starter)
 
 ## contents
  - react 15.4+
- - material UI
- - flexboxcss
+ - [Material UI](http://www.material-ui.com/)
+ - Roboto font
+ - [Flexbox Grid](http://flexboxgrid.com/)
  - react-hot-loader v3+
+ 
 
 
  ## License
