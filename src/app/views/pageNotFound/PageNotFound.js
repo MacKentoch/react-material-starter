@@ -1,19 +1,18 @@
+// @flow weak
+
 import React, {
-  PropTypes,
-  Component
+  // PropTypes,
+  PureComponent
 }                     from 'react';
 import cx             from 'classnames';
-import shallowCompare from 'react-addons-shallow-compare';
 
 
-class PageNotFound extends Component {
+class PageNotFound extends PureComponent {
+  static propTypes = {};
+
   state = {
     animated: true
   };
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
-  }
 
   render() {
     const { animated } = this.state;
@@ -42,9 +41,5 @@ class PageNotFound extends Component {
     );
   }
 }
-
-PageNotFound.propTypes = {
-
-};
 
 export default PageNotFound;

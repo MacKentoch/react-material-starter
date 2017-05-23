@@ -18,20 +18,20 @@ export default {
   spacing: spacing,
   fontFamily: 'Roboto, sans-serif',
   palette: {
-    primary1Color: cyan500,
-    primary2Color: cyan700,
-    primary3Color: grey400,
-    accent1Color: pinkA200,
-    accent2Color: grey100,
-    accent3Color: grey500,
-    textColor: darkBlack,
+    primary1Color:      cyan500,
+    primary2Color:      cyan700,
+    primary3Color:      grey400,
+    accent1Color:       pinkA200,
+    accent2Color:       grey100,
+    accent3Color:       grey500,
+    textColor:          darkBlack,
     alternateTextColor: white,
-    canvasColor: white,
-    borderColor: grey300,
-    disabledColor: fade(darkBlack, 0.3),
-    pickerHeaderColor: cyan500,
-    clockCircleColor: fade(darkBlack, 0.07),
-    shadowColor: fullBlack
+    canvasColor:        white,
+    borderColor:        grey300,
+    disabledColor:      fade(darkBlack, 0.3),
+    pickerHeaderColor:  cyan500,
+    clockCircleColor:   fade(darkBlack, 0.07),
+    shadowColor:        fullBlack
   },
   appBar: {
     color: indigo900
@@ -48,8 +48,8 @@ export default {
     // popover: 2100,
     // snackbar: 2900,
     // tooltip: 3000
-    appBar: 1300,
+    appBar:         1300,
     leftNavOverlay: 1100,
-    leftNav: 1200
+    leftNav:        1200
   }
 };

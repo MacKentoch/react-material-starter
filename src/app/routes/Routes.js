@@ -1,4 +1,8 @@
+// @flow weak
+
 /* eslint no-process-env:0 */
+// @flow weak
+
 import React from 'react';
 import {
   Route,
@@ -16,7 +20,7 @@ const Routes = () => {
     <Route path="/" component={App} >
       <IndexRoute component={Home} />
       <Route path="/about" component={About} />
-
+      
       <Route path="*" component={PageNotFound} />
     </Route>
   );

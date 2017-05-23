@@ -1,9 +1,10 @@
+// @flow weak
+
 import React, {
   // PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import cx                 from 'classnames';
-import shallowCompare     from 'react-addons-shallow-compare';
 import {
   Card,
   CardActions,
@@ -12,7 +13,8 @@ import {
 }                         from 'material-ui/Card';
 import FlatButton         from 'material-ui/FlatButton';
 
-class About extends Component {
+class About extends PureComponent {
+  enterAnimationTimer= null;
 
   state = {
     animated: true,
@@ -21,10 +23,6 @@ class About extends Component {
 
   componentDidMount() {
     this.enterAnimationTimer = setTimeout(this.setViewEnters, 500);
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

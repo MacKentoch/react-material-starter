@@ -1,3 +1,5 @@
+// @flow weak
+
 import React, {
   PropTypes,
   Component
@@ -17,9 +19,9 @@ import {
 class App extends Component {
 
   state = {
-    appName: appConfig.APP_NAME,
+    appName:      appConfig.APP_NAME,
     drawerOpened: false,
-    drawerMenus: appConfig.DRAWER.menus
+    drawerMenus:  appConfig.DRAWER.menus
   };
 
   render() {

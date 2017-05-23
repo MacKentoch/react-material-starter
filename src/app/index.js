@@ -1,3 +1,5 @@
+// @flow weak
+
 import React                from 'react';
 import { render }           from 'react-dom';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
@@ -12,8 +14,8 @@ import 'animate.css';
 import 'flexboxgrid/dist/flexboxgrid.min.css';
 import './style/index.style.scss';
 
-const ELEMENT_TO_BOOTSTRAP = 'root';
-const BootstrapedElement = document.getElementById(ELEMENT_TO_BOOTSTRAP);
+const ELEMENT_TO_BOOTSTRAP  = 'root';
+const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
 
 injectTpEventPlugin();
 

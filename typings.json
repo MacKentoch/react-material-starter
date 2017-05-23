@@ -1,0 +1,17 @@
+{
+  "name": "react-material-starter",
+  "dependencies": {},
+  "globalDependencies": {
+    "classnames": "registry:dt/classnames#0.0.0+20161113184211",
+    "material-ui": "registry:dt/material-ui#0.16.0+20170323194905",
+    "moment": "registry:dt/moment#2.11.1+20161010105546",
+    "react-router": "registry:dt/react-router#4.0.0+20170323201651",
+    "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20161004182750"
+  },
+  "globalDevDependencies": {
+    "chai": "registry:dt/chai#3.4.0+20170217154556",
+    "mocha": "registry:dt/mocha#2.2.5+20170311011848",
+    "sinon": "registry:dt/sinon#1.16.1+20161208163514",
+    "webpack-dev-server": "registry:dt/webpack-dev-server#1.12.1+20170117213337"
+  }
+}

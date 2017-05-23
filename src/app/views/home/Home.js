@@ -1,9 +1,10 @@
+// @flow weak
+
 import React, {
-  // PropTypes,
-  Component
+  PropTypes,
+  PureComponent
 }                         from 'react';
 import cx                 from 'classnames';
-import shallowCompare     from 'react-addons-shallow-compare';
 import {
   Card,
   CardActions,
@@ -12,7 +13,15 @@ import {
 }                         from 'material-ui/Card';
 import FlatButton         from 'material-ui/FlatButton';
 
-class Home extends Component {
+class Home extends PureComponent {
+  static propTypes= {};
+
+  static contextTypes = {
+    // for manual routing
+    router: PropTypes.object.isRequired
+  };
+
+  enterAnimationTimer = null;
 
   state = {
     animated: true,
@@ -21,10 +30,6 @@ class Home extends Component {
 
   componentDidMount() {
     this.enterAnimationTimer = setTimeout(this.setViewEnters, 500);
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -82,15 +87,5 @@ class Home extends Component {
     router.goBack();
   }
 }
-
-Home.propTypes= {
-
-};
-
-Home.contextTypes = {
-  // for manual routing
-  router: React.PropTypes.object.isRequired
-};
-
 
 export default Home;
