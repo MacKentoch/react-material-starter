@@ -1,3 +1,5 @@
+// @flow weak
+
 import { Base64 }  from 'js-base64';
 
 /*
@@ -13,37 +15,24 @@ export const getLocationOrigin = () => {
 /*
   query options:
  */
-export const defaultOptions = {
-  credentials: 'same-origin'
+export const getMethod = {
+  method: 'get'
 };
 
 export const postMethod = {
-  method: 'POST'
+  method: 'post'
+};
+
+export const defaultOptions = {
+  credentials: 'same-origin'
 };
 
 export const jsonHeader = {
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
+    // 'Access-control-Allow-Origin': '*'
   }
-};
-
-/*
-  query response helpers:
- */
-export const checkStatus = (response) => {
-  if (response.status >= 200 && response.status < 300) {
-    return response;
-  } else {
-    const error = new Error(response.statusText);
-    error.response = response;
-    // throw error;
-    return Promise.reject(error);
-  }
-};
-
-export const parseJSON = (response) => {
-  return response.json();
 };
 
 /*

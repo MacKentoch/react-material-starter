@@ -12,8 +12,57 @@
  - Roboto font
  - [Flexbox Grid](http://flexboxgrid.com/)
  - react-hot-loader v3+
+ - webpack 1.x
+
+## Usage
+
+### Install
+
+```bash
+npm install
+```
+or 
+
+```bash
+yarn install
+```
+
+### bundle dev mode
+
+```bash
+npm run dev
+```
+
+### dev : hot reload mode
+
+```bash
+npm run start
+```
+
+### tests
+
+```bash
+npm run test
+```
+
+### bundle production mode
 
 
+```bash
+npm run prod
+```
+
+### mini node-express server (for dev or prod bundles)
+
+with server hot reload:
+```bash
+npm run serve-dev
+```
+
+without hot reload:
+```bash
+npm run serve-prod
+```
 
  ## License
 

@@ -12,7 +12,7 @@ import routes               from './routes/Routes';
 import 'babel-polyfill';
 import 'animate.css';
 import 'flexboxgrid/dist/flexboxgrid.min.css';
-import './style/index.style.scss';
+import './style/index.scss';
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';
 const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);

@@ -15,8 +15,16 @@ import {
   indigo900
 }               from 'material-ui/styles/colors';
 
-
 class App extends Component {
+  static propTypes = {
+    children:   PropTypes.node,
+    router:     PropTypes.object,
+    history:    PropTypes.object,
+    location:   PropTypes.object,
+    actions:    PropTypes.object
+  };
+
+  static contextTypes = {};
 
   state = {
     appName:      appConfig.APP_NAME,
@@ -83,22 +91,22 @@ class App extends Component {
     );
   }
 
-  openDrawer() {
+  openDrawer = () => {
     this.setState({drawerOpened: true});
   }
 
-  closeDrawer() {
+  closeDrawer = () => {
     this.setState({drawerOpened: false});
   }
 
-  toggleDrawer() {
+  toggleDrawer = () => {
     const { drawerOpened } = this.state;
     this.setState({drawerOpened: !drawerOpened});
   }
 
   routeTo = routeName => event => {
     event.preventDefault();
-    const { router } = this.context;
+    const { router } = this.props;
     router.push({pathname: routeName});
   }
 
@@ -111,14 +119,5 @@ class App extends Component {
     this.toggleDrawer();
   }
 }
-
-App.propTypes = {
-  children:   PropTypes.node.isRequired
-};
-
-App.contextTypes = {
-  // for manual routing
-  router: React.PropTypes.object.isRequired
-};
 
 export default App;

@@ -1,7 +1,6 @@
 // @flow weak
 
 /* eslint no-process-env:0 */
-// @flow weak
 
 import React from 'react';
 import {
@@ -18,12 +17,16 @@ import {
 const Routes = () => {
   return (
     <Route path="/" component={App} >
-      <IndexRoute component={Home} />
-      <Route path="/about" component={About} />
+      <IndexRoute component={Home} onEnter={scrollToTop} />
+      <Route path="/about" component={About} onEnter={scrollToTop} />
       
-      <Route path="*" component={PageNotFound} />
+      <Route path="*" component={PageNotFound} onEnter={scrollToTop} />
     </Route>
   );
 };
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
 
 export default Routes;

@@ -15,7 +15,9 @@
     "dev": "cross-env NODE_ENV=dev webpack",
     "test": "cross-env NODE_ENV=test nyc mocha test/.setup.js test/**/*.spec.js --recursive",
     "prod": "cross-env NODE_ENV=production webpack -p --config webpack.production.config.js ",
-    "start": "cross-env NODE_ENV=dev node ./server.hot.reload.js"
+    "start": "cross-env NODE_ENV=dev node ./server.hot.reload.js",
+    "serve-dev": "nodemon ./src/server/index.js",
+    "serve-prod": "node ./src/server/index.js"
   },
   "keywords": [
     "material",
@@ -61,6 +63,7 @@
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",
     "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0",
     "nyc": "^10.0.0",
     "postcss-loader": "^1.1.1",
     "precss": "^1.4.0",
@@ -80,6 +83,7 @@
     "babel-polyfill": "^6.16.0",
     "better-react-spinkit": "^2.0.0-4",
     "classnames": "^2.2.5",
+    "express": "^4.14.0",
     "flexboxgrid": "^6.3.1",
     "material-ui": "^0.16.4",
     "moment": "^2.17.0",
