@@ -8,6 +8,5 @@
 /// <reference path="globals/react-router/index.d.ts" />
 /// <reference path="globals/sinon/index.d.ts" />
 /// <reference path="globals/webpack-dev-server/index.d.ts" />
-/// <reference path="globals/whatwg-fetch/index.d.ts" />
 /// <reference path="modules/react-motion/index.d.ts" />
 /// <reference path="modules/react/index.d.ts" />
