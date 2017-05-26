@@ -6,23 +6,23 @@ import React, {
 }               from 'react';
 import {
   Router,
-  hashHistory // ,
-  // browserHistory
+  // hashHistory
+  browserHistory
 }               from 'react-router';
 
 class Root extends Component {
+  static propTypes = {
+    routes: PropTypes.any
+  };
+
   render() {
     const { routes } = this.props;
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         {routes()}
       </Router>
     );
   }
 }
-
-Root.propTypes = {
-  routes: PropTypes.any
-};
 
 export default Root;

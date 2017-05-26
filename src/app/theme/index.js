@@ -1,3 +1,5 @@
+// @flow weak
+
 import {
   cyan500,
   cyan700,

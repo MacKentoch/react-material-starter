@@ -2,9 +2,10 @@
 
 # React Material Starter
 
-> A simple `ReactJS` starter that uses `Material UI`.
+> A simple `ReactJS` starter that uses `Material UI` and webpack 2.
 
-### [preview here](https://mackentoch.github.io/react-material-starter)
+## Breaking change since v1.0.0:
+- migrated to webpack 2
 
 ## contents
  - react 15.4+
@@ -12,7 +13,7 @@
  - Roboto font
  - [Flexbox Grid](http://flexboxgrid.com/)
  - react-hot-loader v3+
- - webpack 1.x
+ - webpack 2.x
 
 ## Usage
 
@@ -52,14 +53,14 @@ npm run test
 npm run prod
 ```
 
-### mini node-express server (for dev or prod bundles)
+### mini node-express server
 
-with server hot reload:
+with server hot reload (*and app dev bundle*):
 ```bash
 npm run serve-dev
 ```
 
-without hot reload:
+without hot reload (*and app prod bundle*):
 ```bash
 npm run serve-prod
 ```
