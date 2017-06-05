@@ -1,12 +1,11 @@
 // @flow weak
 
 import React, {
-  PropTypes,
   Component
-}               from 'react';
+}                 from 'react';
+import PropTypes  from 'prop-types';
 import {
   Router,
-  // hashHistory
   browserHistory
 }               from 'react-router';
 

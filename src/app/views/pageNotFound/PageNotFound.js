@@ -1,9 +1,9 @@
 // @flow weak
 
 import React, {
-  // PropTypes,
   PureComponent
 }                     from 'react';
+// import PropTypes      from 'prop-types';
 import cx             from 'classnames';
 
 

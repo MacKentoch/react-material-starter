@@ -2,14 +2,20 @@
 
 # React Material Starter
 
-> A simple `ReactJS` starter that uses `Material UI` and webpack 2.
+> A simple `ReactJS` starter that uses `Material UI` `react-router v4` and `webpack 2`.
+
+## Breaking change since v1.1.0:
+- migrated to react 15.5+ (`prop-types breaking changes`)
+- migrated to react-router v4
+
 
 ## Breaking change since v1.0.0:
 - migrated to webpack 2
 
 ## contents
- - react 15.4+
+ - react 15.5+
  - [Material UI](http://www.material-ui.com/)
+ - react-router v4
  - Roboto font
  - [Flexbox Grid](http://flexboxgrid.com/)
  - react-hot-loader v3+

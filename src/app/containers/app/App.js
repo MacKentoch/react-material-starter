@@ -1,9 +1,9 @@
 // @flow weak
 
 import React, {
-  PropTypes,
   Component
 }                           from 'react';
+import PropTypes            from 'prop-types';
 import { appConfig }        from '../../config';
 import AppBar               from 'material-ui/AppBar';
 import Drawer               from 'material-ui/Drawer';
