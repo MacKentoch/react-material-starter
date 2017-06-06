@@ -3,22 +3,20 @@
 import React, {
   Component
 }                 from 'react';
-import PropTypes  from 'prop-types';
+// import PropTypes  from 'prop-types';
 import {
-  Router,
-  browserHistory
-}               from 'react-router';
+  BrowserRouter as Router
+}                               from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import App                      from './containers/app/App';
+
+const history = createBrowserHistory();
 
 class Root extends Component {
-  static propTypes = {
-    routes: PropTypes.any
-  };
-
   render() {
-    const { routes } = this.props;
     return (
-      <Router history={browserHistory}>
-        {routes()}
+      <Router history={history}>
+        <App />
       </Router>
     );
   }

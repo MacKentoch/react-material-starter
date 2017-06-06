@@ -8,7 +8,7 @@ import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import Theme                from './theme';
 import { AppContainer }     from 'react-hot-loader';
 import Root                 from './Root';
-import routes               from './routes/Routes';
+
 import 'babel-polyfill';
 import 'animate.css';
 import 'flexboxgrid/dist/flexboxgrid.min.css';
@@ -20,25 +20,25 @@ const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
 injectTpEventPlugin();
 
 
-const renderApp = appRoutes => {
+const renderApp = RootComponent => {
   render(
     <AppContainer>
       <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
-        <Root routes={appRoutes} />
+        <RootComponent />
       </MuiThemeProvider>
     </AppContainer>,
     BootstrapedElement
   );
 };
 
-renderApp(routes);
+renderApp(Root);
 
 if (module.hot) {
   module.hot.accept(
-    './routes/Routes',
+    './Root',
     () => {
-      const newRoutes = require('./routes/Routes').default;
-      renderApp(newRoutes);
+      const RootComponent = require('./Root').default;
+      renderApp(RootComponent);
     }
   );
 }

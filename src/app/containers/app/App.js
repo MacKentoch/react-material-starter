@@ -13,15 +13,16 @@ import IconMenu             from 'material-ui/IconMenu';
 import MoreVertIcon         from 'material-ui/svg-icons/navigation/more-vert';
 import {
   indigo900
-}               from 'material-ui/styles/colors';
+}                           from 'material-ui/styles/colors';
+import MainRoutes           from '../../routes/MainRoutes';
+import { withRouter }       from 'react-router';
 
 class App extends Component {
   static propTypes = {
-    children:   PropTypes.node,
-    router:     PropTypes.object,
-    history:    PropTypes.object,
-    location:   PropTypes.object,
-    actions:    PropTypes.object
+    // react-router 4:
+    match:    PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history:  PropTypes.object.isRequired
   };
 
   static contextTypes = {};
@@ -33,7 +34,6 @@ class App extends Component {
   };
 
   render() {
-    const { children } = this.props;
     const {
       drawerOpened,
       drawerMenus,
@@ -86,7 +86,7 @@ class App extends Component {
             </IconMenu>
           }
         />
-        {children}
+        <MainRoutes />
       </div>
     );
   }
@@ -106,8 +106,8 @@ class App extends Component {
 
   routeTo = routeName => event => {
     event.preventDefault();
-    const { router } = this.props;
-    router.push({pathname: routeName});
+    const { history } = this.props;
+    history.push({pathname: routeName});
   }
 
   handlesOnDrawerRequestChange = (open) => {
@@ -120,4 +120,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

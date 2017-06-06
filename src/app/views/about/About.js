@@ -3,7 +3,7 @@
 import React, {
   PureComponent
 }                         from 'react';
-// import PropTypes          from 'prop-types';
+import PropTypes          from 'prop-types';
 import cx                 from 'classnames';
 import {
   Card,
@@ -14,6 +14,13 @@ import {
 import FlatButton         from 'material-ui/FlatButton';
 
 class About extends PureComponent {
+  static propTypes = {
+    // react-router 4:
+    match:    PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history:  PropTypes.object.isRequired
+  };
+
   enterAnimationTimer= null;
 
   state = {
@@ -81,13 +88,13 @@ class About extends PureComponent {
 
   routeToHome = event => {
     event.preventDefault();
-    const { router } = this.context;
-    router.push({pathname: '/'});
+    const { history } = this.props;
+    history.push({pathname: '/'});
   }
 
   goPreviousRoute = () => {
-    const { router } = this.context;
-    router.goBack();
+    const { history } = this.props;
+    history.goBack();
   }
 }
 

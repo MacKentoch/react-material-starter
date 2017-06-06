@@ -14,7 +14,12 @@ import {
 import FlatButton         from 'material-ui/FlatButton';
 
 class Home extends PureComponent {
-  static propTypes= {};
+  static propTypes = {
+    // react-router 4:
+    match:    PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history:  PropTypes.object.isRequired
+  };
 
   static contextTypes = {
     // for manual routing
@@ -83,8 +88,8 @@ class Home extends PureComponent {
   }
 
   goPreviousRoute = () => {
-    const { router } = this.context;
-    router.goBack();
+    const { history } = this.props;
+    history.goBack();
   }
 }
 
